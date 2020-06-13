@@ -1,5 +1,7 @@
 fn main() {
+  shadow();
   tup();
+  tuptwo();
 }
 
 fn shadow() {
@@ -17,5 +19,11 @@ fn tup() {
 
     let (x, y, z) = tup;
 
-    println!("The value of y is: {}", y);
+    println!("The value of (x, y, z) is: ({}, {}, {})", x, y, z);
+}
+
+fn tuptwo() {
+    let tup = (500, 6.4, 1);
+
+    println!("The value of tuple(x, y, z) is: ({}, {}, {})", tup.0, tup.1, tup.2);
 }
