@@ -1,22 +1,22 @@
 fn main() {
-  shadow();
+    shadow();
 
-  tup();
+    tup();
 
-  tuptwo();
+    tuptwo();
 
-  // err();
+    // err();
 
-  basic();
+    basic();
 
-  params(43);
+    params(43);
 
-  str_params("hello".to_string(), 43);
+    str_params("hello".to_string(), 43);
 
-  array(4, 2);
-  // array(8); // out of bounds
+    array(4, 2);
+    // array(8); // out of bounds
 
-  state();
+    state();
 }
 
 fn shadow() {
@@ -40,7 +40,10 @@ fn tup() {
 fn tuptwo() {
     let tup = (500, 6.4, 1);
 
-    println!("The value of tuple(x, y, z) is: ({}, {}, {})", tup.0, tup.1, tup.2);
+    println!(
+        "The value of tuple(x, y, z) is: ({}, {}, {})",
+        tup.0, tup.1, tup.2
+    );
 }
 
 fn _err() {
@@ -48,6 +51,8 @@ fn _err() {
     let index = 10;
 
     let element = a[index];
+
+
 
     println!("The value of element is: {}", element);
 }
