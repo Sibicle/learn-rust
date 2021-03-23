@@ -29,6 +29,12 @@ impl<T> List<T> {
       node.elem
     })
   }
+
+  pub fn peek(&self) -> Option<&T> {
+    self.head.as_ref().map(|node| {
+      &node.elem
+    })
+  }
 }
 
 impl<T> Drop for List<T> {
@@ -54,7 +60,10 @@ mod test {
     list.push(2);
     list.push(3);
 
+    assert_eq!(list.peek(), Some(3).as_ref());
     assert_eq!(list.pop(), Some(3));
+
+    assert_eq!(list.peek(), Some(2).as_ref());
     assert_eq!(list.pop(), Some(2));
 
     list.push(4);
